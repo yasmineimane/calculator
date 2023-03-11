@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+	int nbr_1,nbr_2;
+	char operator;
+	printf("please enter a number :");
+	scanf("%d",&nbr_1);
+	printf("please enter a number :");
+	scanf("%d",&nbr_2);
+	printf("please enter the operator :");
+	scanf("%c",&operator);
+	switch(operator)
+	{
+		case '+': printf("%d + %d = %d",nbr_1,nbr_2,nbr_1+nbr_2);break;
+		case '-': printf("%d - %d = %d",nbr_1,nbr_2,nbr_1-nbr_2);break;
+		case '*': printf("%d * %d = %d",nbr_1,nbr_2,nbr_1*nbr_2);break;
+		case '/':if(nbr_2==0)
+		 {
+		 	printf("error");break;
+		 }else
+		 {
+		 	printf("%d / %d = %d",nbr_1,nbr_2,nbr_1/nbr_2);break;
+		 }
+		 default:printf("operator doesn't exist");break;
+	}
+	return 0;
+}
